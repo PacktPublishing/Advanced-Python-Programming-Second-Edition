@@ -1,0 +1,3 @@
+To compile all the examples simply type:
+
+$ python setup.py build_ext --inplace
