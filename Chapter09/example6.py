@@ -1,5 +1,3 @@
-# ch05/example6.py
-
 import threading
 import requests
 import time

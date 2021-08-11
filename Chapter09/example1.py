@@ -1,5 +1,3 @@
-# ch05/example1.py
-
 import requests
 
 url = 'http://www.google.com'

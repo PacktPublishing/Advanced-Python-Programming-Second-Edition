@@ -1,5 +1,3 @@
-# ch8/example3.py
-
 import cv2
 
 im = cv2.imread('input/ship.jpg')

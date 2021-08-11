@@ -1,5 +1,3 @@
-# ch05/example2.py
-
 import requests
 
 def ping(url):
