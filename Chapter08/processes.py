@@ -1,6 +1,7 @@
 import multiprocessing
 import time
 
+
 class Process(multiprocessing.Process):
     def __init__(self, id):
         super(Process, self).__init__()
@@ -10,12 +11,14 @@ class Process(multiprocessing.Process):
         time.sleep(1)
         print("I'm the process with id: {}".format(self.id))
 
+
 def square(x):
     return x * x
 
+
 def map_test():
     pool = multiprocessing.Pool()
-        
+
     inputs = [0, 1, 2, 3, 4]
     outputs = pool.map(square, inputs)
     print(outputs)
@@ -24,7 +27,7 @@ def map_test():
     print(outputs)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     processes = Process(1), Process(2), Process(3), Process(4)
     [p.start() for p in processes]
 

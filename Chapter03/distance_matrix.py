@@ -15,6 +15,6 @@ def distance_matrix_numexpr(n):
     r = np.random.rand(n, 2)
     r_i = r[:, np.newaxis]
     r_j = r[np.newaxis, :]
-    d_ij = ne.evaluate('sum((r_j - r_i)**2, 2)')
+    d_ij = ne.evaluate("sum((r_j - r_i)**2, 2)")
 
-    return ne.evaluate('sqrt(d_ij)')
+    return ne.evaluate("sqrt(d_ij)")

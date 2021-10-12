@@ -2,13 +2,15 @@ import threading
 import random
 import time
 
+
 def update():
     global counter
 
     with count_lock:
-        current_counter = counter # reading in shared resource
-        time.sleep(random.randint(0, 1)) # simulating heavy calculations
+        current_counter = counter  # reading in shared resource
+        time.sleep(random.randint(0, 1))  # simulating heavy calculations
         counter = current_counter + 1
+
 
 counter = 0
 count_lock = threading.Lock()
@@ -20,5 +22,5 @@ for thread in threads:
 for thread in threads:
     thread.join()
 
-print(f'Final counter: {counter}.')
-print('Finished.')
+print(f"Final counter: {counter}.")
+print("Finished.")

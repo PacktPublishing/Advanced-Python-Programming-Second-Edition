@@ -2,6 +2,7 @@ import threading
 import requests
 import time
 
+
 class MyThread(threading.Thread):
     def __init__(self, url):
         threading.Thread.__init__(self)
@@ -10,12 +11,13 @@ class MyThread(threading.Thread):
 
     def run(self):
         res = requests.get(self.url)
-        self.result = f'{self.url}: {res.text}'
+        self.result = f"{self.url}: {res.text}"
+
 
 urls = [
-    'http://httpstat.us/200',
-    'http://httpstat.us/200?sleep=20000',
-    'http://httpstat.us/400'
+    "http://httpstat.us/200",
+    "http://httpstat.us/200?sleep=20000",
+    "http://httpstat.us/400",
 ]
 
 start = time.time()
@@ -28,6 +30,6 @@ for thread in threads:
 for thread in threads:
     print(thread.result)
 
-print(f'Took {time.time() - start : .2f} seconds')
+print(f"Took {time.time() - start : .2f} seconds")
 
-print('Done.')
+print("Done.")

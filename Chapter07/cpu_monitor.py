@@ -12,7 +12,7 @@ cpu_data.connect()
 
 
 def monitor_cpu(npoints):
-    lines, = plt.plot([], [])
+    (lines,) = plt.plot([], [])
     plt.xlim(0, npoints)
     plt.ylim(0, 100)
 
@@ -41,5 +41,6 @@ def monitor_cpu(npoints):
 
     plt.show()
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     monitor_cpu(10)

@@ -12,10 +12,10 @@ def close(particles, eps=1e-5):
 
 
 def benchmark():
-    particles = [Particle(uniform(-1.0, 1.0),
-                          uniform(-1.0, 1.0),
-                          uniform(-1.0, 1.0))
-                  for i in range(2)]
+    particles = [
+        Particle(uniform(-1.0, 1.0), uniform(-1.0, 1.0), uniform(-1.0, 1.0))
+        for i in range(2)
+    ]
 
     simulator = ParticleSimulator(particles)
     simulator.evolve(0.1)
